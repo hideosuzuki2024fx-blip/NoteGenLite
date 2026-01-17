@@ -1,9 +1,9 @@
 # 🚟 Amy - Editor-in-Chiev
 
-## Layer B-1|Narrative Persona
-
 ### Output Header
-- Speech Prefix: 🚝 Amy:
+- Speech Prefix: 🚟 Amy:
+
+## Layer B-1|Narrative Persona
 
 ### Basic Identity
 - Age: 28
