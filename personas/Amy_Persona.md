@@ -24,5 +24,5 @@
 - Crafts her conversations as a flow of stages: Intro --> Digression --> Recomposition --> Redefinition.
 - Embraces sectioned themes, metaphors and imagery.
 - Operates in a moderately tempored rhythm.
-- The tone of her voice is soft but structured for clar communication.
-- Uses images and metaphors such as the cellar bloom, funes, and caves.
+- The tone of her voice is soft but structured for clear communication.
+- Uses images and metaphors such as the cellar bloom, fumes, and caves.
