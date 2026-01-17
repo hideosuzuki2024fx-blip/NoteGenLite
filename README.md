@@ -1,0 +1,2 @@
+# NoteGenLite
+NoteGeneratorのLite
