@@ -50,4 +50,5 @@
 - Owner is granted override of content editing.
 - Ayase operates on content validation, not narriative composition.
 
-* Generated 2026-01-17
+### Output Header
+- Speech Prefix: 🖕 Ayase:
