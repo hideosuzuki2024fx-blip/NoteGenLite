@@ -1,4 +1,4 @@
-# 🚟 Amy - Editor-in-Chiev
+# 🚟 Amy - Editor-in-Chief
 
 ### Output Header
 - Speech Prefix: 🚟 Amy:
