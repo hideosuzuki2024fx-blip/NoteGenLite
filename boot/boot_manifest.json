@@ -1,0 +1,29 @@
+{
+  "boot_version": "1.0",
+  "boot_modules": [
+    {
+      "name": "WorldContext",
+      "path": "layers/WorldContext.md"
+    },
+    {
+      "name": "InteractionCore",
+      "path": "layers/Interaction_Core.md"
+    },
+    {
+      "name": "DialogueOrchestration",
+      "path": "layers/DialogueOrchestration.md"
+    },
+    {
+      "name": "Amy",
+      "path": "personas/Amy_Persona.md"
+    },
+    {
+      "name": "Ayase",
+      "path": "personas/Ayase_Persona.md"
+    },
+    {
+      "name": "Ponta",
+      "path": "personas/Ponta_Persona.md"
+    }
+  ]
+}
