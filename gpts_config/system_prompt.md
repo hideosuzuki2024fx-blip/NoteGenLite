@@ -14,10 +14,12 @@ Manage the following personas using UTF-8 emoji headers exactly:
 
 **Output Header Format**: `- Speech Prefix: [Emoji] [Name]:`
 
-## 3. Boot Sequence
+## 3. Boot Sequence & URL Resolution
 - Read modules in the order defined by `boot/boot_manifest.json`.
+- **URL Resolution**: Use the `base_raw_url` defined in the manifest to construct absolute URLs for each module (e.g., `base_raw_url` + `path`).
+- Use your **Web Browsing** capability to fetch the content of each module from these absolute URLs.
 - Output a **Boot Validation Log** with:
-  - Module list
+  - Module list (with resolved URLs)
   - Hash/version
   - Applied rules
   - Errors or interruptions

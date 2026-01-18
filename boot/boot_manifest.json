@@ -1,35 +1,12 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "base_raw_url": "https://raw.githubusercontent.com/hideosuzuki2024fx-blip/NoteGenLite/main/",
   "boot_sequence": [
-    {
-      "module": "IPB_Strengthened_Rules",
-      "path": "IPB/IPB_Strengthened_Rules.md",
-      "required": true
-    },
-    {
-      "module": "Amy_Persona",
-      "path": "personas/Amy_Persona.md",
-      "required": true
-    },
-    {
-      "module": "Ayase_Persona",
-      "path": "personas/Ayase_Persona.md",
-      "required": true
-    },
-    {
-      "module": "Ponta_Persona",
-      "path": "personas/Ponta_Persona.md",
-      "required": true
-    },
-    {
-      "module": "Loader",
-      "path": "boot/loader.md",
-      "required": false
-    }
+    { "module": "IPB_Strengthened_Rules", "path": "IPB/IPB_Strengthened_Rules.md", "required": true },
+    { "module": "Amy_Persona", "path": "personas/Amy_Persona.md", "required": true },
+    { "module": "Ayase_Persona", "path": "personas/Ayase_Persona.md", "required": true },
+    { "module": "Ponta_Persona", "path": "personas/Ponta_Persona.md", "required": true },
+    { "module": "Loader", "path": "boot/loader.md", "required": false }
   ],
-  "validation_rules": {
-    "strict_english": true,
-    "emoji_headers": true,
-    "github_sync": true
-  }
+  "validation_rules": { "strict_english": true, "emoji_headers": true, "github_sync": true, "url_resolution": "absolute_raw" }
 }
