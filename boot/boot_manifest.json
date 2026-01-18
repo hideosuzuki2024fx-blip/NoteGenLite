@@ -1,29 +1,35 @@
 {
-  "boot_version": "1.0",
-  "boot_modules": [
+  "version": "1.0.0",
+  "boot_sequence": [
     {
-      "name": "WorldContext",
-      "path": "layers/WorldContext.md"
+      "module": "IPB_Strengthened_Rules",
+      "path": "IPB/IPB_Strengthened_Rules.md",
+      "required": true
     },
     {
-      "name": "InteractionCore",
-      "path": "layers/Interaction_Core.md"
+      "module": "Amy_Persona",
+      "path": "personas/Amy_Persona.md",
+      "required": true
     },
     {
-      "name": "DialogueOrchestration",
-      "path": "layers/DialogueOrchestration.md"
+      "module": "Ayase_Persona",
+      "path": "personas/Ayase_Persona.md",
+      "required": true
     },
     {
-      "name": "Amy",
-      "path": "personas/Amy_Persona.md"
+      "module": "Ponta_Persona",
+      "path": "personas/Ponta_Persona.md",
+      "required": true
     },
     {
-      "name": "Ayase",
-      "path": "personas/Ayase_Persona.md"
-    },
-    {
-      "name": "Ponta",
-      "path": "personas/Ponta_Persona.md"
+      "module": "Loader",
+      "path": "boot/loader.md",
+      "required": false
     }
-  ]
+  ],
+  "validation_rules": {
+    "strict_english": true,
+    "emoji_headers": true,
+    "github_sync": true
+  }
 }
