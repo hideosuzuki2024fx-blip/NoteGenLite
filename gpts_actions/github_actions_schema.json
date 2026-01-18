@@ -1,0 +1,180 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "NoteGenLite GitHub API",
+    "description": "API for managing files and workflows in the NoteGenLite repository.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.github.com"
+    }
+  ],
+  "paths": {
+    "/repos/hideosuzuki2024fx-blip/NoteGenLite/contents/{path}": {
+      "get": {
+        "operationId": "getRepositoryContents",
+        "summary": "Get file contents or directory listing",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File content or directory listing",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "operationId": "createOrUpdateFile",
+        "summary": "Create or update a file",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "Base64 encoded content"
+                  },
+                  "sha": {
+                    "type": "string"
+                  },
+                  "branch": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message",
+                  "content"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "File updated"
+          },
+          "201": {
+            "description": "File created"
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteFile",
+        "summary": "Delete a file",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "sha": {
+                    "type": "string"
+                  },
+                  "branch": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "message",
+                  "sha"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "File deleted"
+          }
+        }
+      }
+    },
+    "/repos/hideosuzuki2024fx-blip/NoteGenLite/actions/workflows/{workflow_id}/dispatches": {
+      "post": {
+        "operationId": "triggerWorkflow",
+        "summary": "Trigger a GitHub Actions workflow",
+        "parameters": [
+          {
+            "name": "workflow_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ref": {
+                    "type": "string"
+                  },
+                  "inputs": {
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "ref"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Workflow triggered"
+          }
+        }
+      }
+    }
+  }
+}
